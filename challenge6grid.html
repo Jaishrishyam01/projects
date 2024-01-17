@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid6</title>
+    <style>
+    .bank{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(150px, auto );
+        grid-gap: 20px;
+    }
+    .locker{
+        border:4px solid lavenderblush ;
+        border-radius: 3px;
+        color: rgb(0, 0, 51);
+        background-color:cadetblue;
+        font-size: x-large;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;}
+        
+        .locker::first-letter{
+            text-transform: capitalize;
+        }
+    #locker-1{
+        grid-row-start: 1;
+        grid-row-end:5;
+    }
+    #locker-3{
+        grid-column-start:10;
+        grid-column-end:2 ;
+        grid-row-start:2 ;
+        grid-row-end: 1;
+    }
+    #locker-2{
+        grid-column-start: 2;
+        grid-column-end:4 ;
+        grid-row-start:2 ;
+        grid-row-end: 4;
+    }
+    #locker-4{
+        grid-column-start: 4;
+        grid-column-end:10 ;
+        grid-row-start:2 ;
+        grid-row-end: 4;
+    }
+    #locker-5{
+        grid-column-start: 2;
+        grid-column-end:10;
+    }
+
+    
+  
+    </style>
+</head>
+<body>
+    <div class="bank">
+    <div class="locker" id="locker-1">nav</div>
+    <div class="locker" id="locker-2">article</div>
+    <div class="locker" id="locker-3">header</div>
+    <div class="locker" id="locker-4">ads</div>
+    <div class="locker" id="locker-5">footer</div>
+</div>
+</body>
+</html>

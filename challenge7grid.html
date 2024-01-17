@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 7 </title>
+
+    <style>
+     *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+     }
+     .container{
+        display: grid;
+        grid-template-columns:repeat(11, 1fr);
+        /* grid-template-columns:repeat(11, 1fr) ye karne se vo columnwise 11 main divide ho jayega aur unn sab boxes ke size 1fr ho jayegi inshort uss webpage pe 11 column bann jayega*/
+        grid-auto-rows: minmax(50px, auto );
+        grid-gap: 20px;
+     }
+     
+     .box{
+        background-color: cadetblue;
+        font-size: 1rem;
+        color: black;
+        border: 2px solid white;
+        border-radius: 2px;
+     }
+
+     #box-1{
+      grid-column-start: 1;
+      grid-column-end: 12;
+     }
+     #box-2{
+        grid-row-start: 2;
+        grid-row-end: 12;
+        grid-column-start:1 ;
+        grid-column-end: 3;
+     }
+     #box-3{
+        grid-column-start: 3;
+        grid-column-end: 9;
+     }
+     #box-4{
+      grid-row-start: 3;
+      grid-row-end: 12;
+      grid-column-start: 3;
+      grid-column-end:9 ;
+     }
+     #box-5{
+        grid-column-start: 9;
+        grid-column-end: 12;
+        grid-row-start: 2;
+        grid-row-end: 12;
+     }
+     #box-6{
+        grid-column-start: 1;
+        grid-column-end: 12;
+        grid-row-start: 12;
+        grid-row-end: 13;
+     }
+
+     @media (max-width:720px){
+        #box-3{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 12;
+        }
+
+        #box-2{
+            grid-row-start: 3;
+            grid-row-end: 12;
+        }
+        #box-4{
+            grid-column-start: 3;
+            grid-column-end: 12;
+        }
+        #box-6{
+            grid-column-start: 3;
+            grid-column-end: 12;
+        }
+        #box-5{
+            grid-row-start: 12;
+            grid-row-end: 13;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+     }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">header</div>
+        <div class="box" id="box-2">sidebar</div>
+        <div class="box" id="box-3">navigation</div>
+        <div class="box" id="box-4">main</div>
+        <div class="box" id="box-5">ads</div>
+        <div class="box" id="box-6">footer</div>
+    </div>
+    
+</body>
+</html>

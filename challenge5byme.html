@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solar system</title>
+    <style>
+        body{
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            margin: 0;
+            box-sizing: border-box;
+            align-content: center;
+            justify-content: center;
+        }
+        .container{
+            
+            position: relative;
+            height: 400px;
+            width: 400px;
+        }
+        .sun{
+            position:absolute;
+            top: 28%;
+            left: 43%;
+            width: 200px;
+            height: 200px;
+            border: 3px solid yellow;
+            border-radius: 50% ;
+            box-shadow: 0 0 2px white;
+          
+            
+        }
+        .earth{
+            border-radius: 50%;
+            top: 6%;
+            position:absolute;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border:3px solid blue;
+            animation: orbit 3s infinite linear;
+           
+            
+        }
+        .moon{
+            border-radius: 50%;
+            top: 5%;
+            left: 4%;
+            width: 25px;
+            height: 25px;
+            border: 3px solid rgb(255, 255, 255);
+            animation: orbit 35.6s infinite linear;
+        }
+       .earth::before{
+       top: 5%;
+       
+
+    }
+       
+        @keyframes orbit{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer  ">
+        <div class="sun"></div>
+        <div class="earth my-5 ">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+</html>

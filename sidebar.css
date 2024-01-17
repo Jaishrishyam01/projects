@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.main-box{
+    background-image: url("photo1.jpg");
+    height: 100vh;
+    /* vh mtlb viewport 
+    viewport ka mtlb hain ke jo hum web page dekhte hain vo .... */
+    background-size: cover;
+}
+.btn-one i{
+    color: rgb(1, 0, 0);
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    transition: all 0.3s linear;
+}
+.sidebar-menu{
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s linear;
+}
+.sidebar-menu .logo{
+   position: absolute;
+   width: 100%;
+   line-height: 60px;
+   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+   height: 60px;
+}
+.sidebar-menu .logo a{
+    position: absolute;
+    left: 80px;
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.sidebar-menu .btn-two i{
+    color: grey;
+    font-size: 25px;
+    position: absolute;
+    left: 275px;
+    top: 15px;
+   opacity: 0;
+   cursor: pointer;
+   transition: all 0.3s linear;
+}
+.sidebar-menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+.sidebar-menu .menu li{
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+.sidebar-menu .menu i,a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-left: 8px;
+}
+.sidebar-menu .social-media {
+    color: black;
+    opacity: 0.5;
+    position: absolute;
+
+    left: 30px;
+    bottom:30px;
+}
+.sidebar-menu .social-media i{
+    padding: 0 5px;
+}
+#check{
+    display: none;
+}
+.sidebar-menu .menu li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+.btn-one i:hover{
+    font-size: 35px; 
+    cursor: pointer;
+
+}
+.btn-two i:hover{
+    font-size: 30px;
+}
+.sidebar-menu .social-media i:hover{
+    opacity:0.9;
+    transform: scale(1.2);
+}
+#check:checked ~ .sidebar-menu{
+    /* ~ ye sign ka mtlb hain tild selector in css mtlb ye "~"sign apne sibling element ko select karne main kaam aata hain.... jaise check ek id hain aur iske sibling .btn-one aur    .sidebar-menu hain   */
+    left: 0;
+}
+#check:checked ~ .btn-one i{
+    opacity: 0;
+
+}
+#check:checked ~ .sidebar-menu .btn-two i{
+    opacity: 1;
+}

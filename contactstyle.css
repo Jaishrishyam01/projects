@@ -1,0 +1,62 @@
+.tub{
+    background-color:lightgoldenrodyellow ;
+    font-family: 'Alkatra', Courier, monospace;
+    padding: 20px;
+    margin: 150px;
+    border: 5px solid lightgreen;
+    border-radius: 6px;
+    box-sizing:content-box;
+    width: 80%;
+    
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,select{
+    width: 90%;
+    padding: 20px;
+    border: 4px solid rgb(17, 17, 16);
+    border-radius: 5px;
+}
+input[type="submit"]{
+    width: 90%;
+    padding: 15pxpx;
+    border:3px solid lightskyblue;
+    border-radius: 7px;
+    color: black; 
+}
+.clear{
+    width: 30%;
+    padding: 10px;
+    border: 2px solid lightgray;
+    background-color: burlywood;
+    color: black;
+    border-radius: 5px;
+}
+.clear:hover{
+    background-color: darkgoldenrod;
+}
+input[type="submit"]:hover{
+    background-color: darkgoldenrod;
+}
+
+h3{
+    padding: 8px;
+}
+img{
+    float: left;
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    border:9px solid lightcoral ;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+.imp{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Aclonica', Courier, monospace;
+    font-size: 350%;
+    margin: 9px;
+    padding: 10px;
+}
